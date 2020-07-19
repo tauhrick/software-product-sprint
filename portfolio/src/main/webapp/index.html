@@ -7,7 +7,7 @@
         <script src="script.js"></script>
         <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
     </head>
-    <body>
+    <body onload="getComments()">
         <main class="wrapper">
             <header class="site-header">
                 <nav class="nav">
@@ -53,6 +53,21 @@
                         <a href="https://codeforces.com/profile/chirag11032000">chirag11032000</a> on Codeforces;
                         <a href="https://www.codechef.com/users/chirag11032000">chirag11032000</a> on Codechef
                     </p>
+                </div>
+            </section>
+            <section class="site-footer">
+                <div class="container">
+                    <header class="page-header">
+                        <h3 class="page-title">Comments</h3>
+                    </header>
+                    <ul id="comments"></ul>
+                    <header class="page-header">
+                        <h3 class="page-title">Leave your comment here</h3>
+                    </header>
+                    <form action="/data" method="POST">
+                        <input type="text" name="commentBody">
+                        <input type="submit" value="submit">
+                    </form>
                 </div>
             </section>
         </main>
